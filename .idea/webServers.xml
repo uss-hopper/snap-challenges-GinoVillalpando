@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="61f422cf-a1ff-40c8-85d9-0533e88e9863" name="snap-challenges-ginovillalpando" url="http://bootcamp-coders.cnm.edu">
+        <fileTransfer host="bootcamp-coders.cnm.edu" port="22" rootFolder="/home/gvillalpando/public_html/snap-challenges-GinoVillalpando" accessType="SFTP" authAgent="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
