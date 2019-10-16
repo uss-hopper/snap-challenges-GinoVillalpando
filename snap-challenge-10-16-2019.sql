@@ -1,22 +1,23 @@
-DROP IF EXISTS 'like';
+DROP IF EXISTS `like`;
 DROP IF EXISTS tweet;
 DROP IF EXISTS task;
+DROP IF EXISTS profiletweet;
 
-CREATE TABLE profile1 (
+CREATE TABLE profileTweet (
 	-- this creates the attribute for the primary key
 	-- not null means the attribute is required!
-	profileId BINARY(16) NOT NULL,
-	profileActivationToken CHAR(32),
-	profileAtHandle VARCHAR(32) NOT NULL,
-	profileEmail VARCHAR(128) NOT NULL,
+	profileTweetId BINARY(16) NOT NULL,
+	profileTweetActivationToken CHAR(32),
+	profileTweetAtHandle VARCHAR(32) NOT NULL,
+	profileTweetEmail VARCHAR(128) NOT NULL,
 	-- to make something optional, exclude the not null
-	profileHash CHAR(97) NOT NULL,
-	profilePhone VARCHAR(32),
+	profileTweetHash CHAR(97) NOT NULL,
+	profileTweetPhone VARCHAR(32),
 	-- to make sure duplicate data cannot exist, create a unique index
-	UNIQUE(profileAtHandle),
-	UNIQUE(profileEmail),
+	UNIQUE(profileTweetAtHandle),
+	UNIQUE(profileTweetEmail),
 	-- this officiates the primary key for the entity
-	PRIMARY KEY(profileId)
+	PRIMARY KEY(profileTweetId)
 );
 
 create table task(
@@ -57,8 +58,8 @@ CREATE TABLE `like` (
 	PRIMARY KEY(likeProfileId, likeTweetId)
 );
 
-SELECT tweet.tweetContent, profile1.profileAtHandle
+SELECT tweet.tweetContent, profileTweet.profileTweetAtHandle
 FROM tweet
 inner join 'like' on tweet.tweetId = 'like'.likeTweetId
-inner join profile on 'like'.likeprofileId = profile.profileId
-WHERE tweet.tweetId = unhex('0536faef082b454e9d444cdbe7887d7a')
+inner join profileTweet on 'like'.likeprofileId = profileTweet.profileTweetId
+WHERE tweet.tweetId = unhex('0536faef082b454e9d444cdbe7887d7a');
