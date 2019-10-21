@@ -18,10 +18,10 @@ class profile {
 
 	/**
 	 * constructor for this profile
-	 * @param int $newProfileId id of this profile or null if a new profile
+	 * @param float $newProfileId id of this profile or null if a new profile
 	 * @param string
 	 */
-	public function __construct($newProfileId, ?string $newProfileName) {
+	public function __construct(int $newProfileId, ?string $newProfileName) {
 		try {
 			$this->setProfileId($newProfileId);
 			$this->setProfileName($newProfileName);
@@ -43,10 +43,10 @@ class profile {
 	 * mutator for profile id
 	 */
 
-	public function setProfileId($newProfileId): int {
+	public function setProfileId(int $newProfileId): void {
 		$newProfileId = filter_var($newProfileId, FILTER_VALIDATE_INT);
 		if ($newProfileId === false) {
-			throw (new \http\Exception\UnexpectedValueException("profile id is not a valid integer"));
+			throw (new UnexpectedValueException("profile id is not a valid integer"));
 	}
 		/**
 		 * convert and store the profile Id
@@ -80,10 +80,10 @@ class profile {
 		}
 		$this->profileName = $newProfileName;
 	}
-
-		/**
-		 * create an HTML formatted profile
-		 */
-		$gino = new profile (1, "grievxus");
-
 }
+
+$gino = new profile (1234, "grievxus");
+echo("Profile ID: ");
+echo($gino -> getProfileId());
+echo("Profile Name: ");
+echo($gino -> setProfileName());
