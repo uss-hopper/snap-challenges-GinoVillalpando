@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Snap Challenge for 10-23-2019</title>
+	</head>
+		<body>
+		<ol>
+			<li>Master Branch - this is the final release after all development and would be merged last (no development on this branch ever)</li>
+			<li>Develop Branch - this is the basis for almost all new code. you merge into develop when your work is completed for your ticket </li>
+			<li>Feature Branch - The branch that you develop on when working on your tickets, they should be small and self-contained.  Frequently, this means one per ticket.
+				When a feature is complete, it gets merged back into develop.</li>
+			<li>Release Branch - When the feature branch is stable then these are set to release branches, Creating this
+				branch starts the next release cycle, so no new features can be added after this point—only bug fixes,
+				documentation generation, and other release-oriented tasks should go in this branch.
+				the release branch gets merged into master and tagged with a version number.</li>
+			<li>Hotfix Branch - Maintenance or “hotfix” branches are used to quickly patch production releases. They're based on master instead of develop.
+				As soon as the fix is complete, it should be merged into both master and develop (or the current release branch)</li>
+		</ol>
+		</body>
+
+</html>
