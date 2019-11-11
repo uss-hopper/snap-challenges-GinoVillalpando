@@ -1,19 +1,12 @@
-let pre = document.getElementById("out");
-
-function log(result) {
-	pre.appendChild(document.createTextNode(result + "\n"));
-}
-
-
 
 let review = [{
 	"id": 1, "name": "Leanne Graham", "username": "Bret", "email": "Sincere@april.biz", "address": {
 		"street": "Kulas Light", "suite":
-			"Apt. 556", "city": "Gwenborough", "zipcode": "92998-3874", "geo": {"lat": "-37.3159", "lng": "81.1496"}
-	}, "phone": "1-770-736-8031 x56442", "website": "hildegard.org", "company": {
-		"name": "Romaguera-Crona", "catchPhrase": "Multi-layered " +
-			"client-server neural-net", "bs": "harness real-time e-markets"
-	}
+		"Apt. 556", "city": "Gwenborough", "zipcode": "92998-3874", "geo": {"lat": "-37.3159", "lng": "81.1496"}
+}, "phone": "1-770-736-8031 x56442", "website": "hildegard.org", "company": {
+	"name": "Romaguera-Crona", "catchPhrase": "Multi-layered " +
+	"client-server neural-net", "bs": "harness real-time e-markets"
+}
 }, {
 	"id": 2, "name": "Ervin Howell", "username": "Antonette", "email": "Shanna@melissa.tv", "address": {
 		"street": "Victor Plains",
@@ -162,10 +155,8 @@ let review = [{
 		}
 	}];
 
-review.forEach(function(item, index, object) {
-	if (item === "company") {
-		object.splice(1, 1, 'company');
-	}
+review.forEach(function(review) {
+	delete review.company;
 });
 
-console.log(review);
+document.write(forEach);
