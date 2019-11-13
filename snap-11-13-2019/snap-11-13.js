@@ -231,7 +231,7 @@ let arr = [
 	}
 ];
 
-arr.map(function(v){delete v.company});
+arr.map(function(value){delete value.company});
 
 console.log(arr);
 
