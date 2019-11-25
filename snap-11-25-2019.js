@@ -2,21 +2,17 @@ let string be defined
 
 function deleteVowels(string) {
 	iterate through string using a for loop
-	spit any vowels from the string then replace with empty character
+	split any vowels from the string then replace with empty character
 	return the string
 	}
 
 	let array be defined
 
-	create function that uses math.max to check the array for the greatest number
+	create function that console.logs math.max to check the array for the greatest number
 
 
-fucntion fibonacciLoop(num) {
-	let a equal 1, b equal 0, then temp number to be stored;
-	while loop that iterates the number is greater than or equal to 0
-	temp equals a;
-	a = a + b;
-	b = temp;
-	decrement the num variable;
-	return b;
+fucntion fibonacciLoop(100) {
+	let arrary have variables [0, 1] to involve adding two numbers together
+	use loop that iterates from i = 2 and adds numbers to the array until the length of array is equal to n + 1
+	return the number at n index of the array
 }
