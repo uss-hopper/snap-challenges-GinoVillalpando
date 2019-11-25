@@ -2,7 +2,7 @@ let string be defined
 
 function deleteVowels(string) {
 	iterate through string using a for loop
-	split any vowels from the string then replace with empty character
+	split any vowels from the string then replace with empty character using regexp
 	return the string
 	}
 
