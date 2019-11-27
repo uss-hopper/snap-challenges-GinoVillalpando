@@ -1,5 +1,5 @@
 
-let review = [{
+let people = [{
 	"id": 1, "name": "Leanne Graham", "username": "Bret", "email": "Sincere@april.biz", "address": {
 		"street": "Kulas Light", "suite":
 		"Apt. 556", "city": "Gwenborough", "zipcode": "92998-3874", "geo": {"lat": "-37.3159", "lng": "81.1496"}
@@ -74,7 +74,7 @@ let review = [{
 		},
 		"phone": "(254)954-1289",
 		"website": "demarco.info",
-		"companyName": {
+		"company": {
 			"name": "Keebler LLC", "catchPhrase": "User-centric fault-tolerant solution",
 			"bs": "revolutionize end-to-end systems"
 		}
@@ -155,8 +155,7 @@ let review = [{
 		}
 	}];
 
-review.forEach(function(review) {
-	delete review.company;
+people.forEach(function(person) {
+	delete person.company;
+	console.log(people)
 });
-
-document.write(forEach);
