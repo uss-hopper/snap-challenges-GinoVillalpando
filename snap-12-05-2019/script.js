@@ -1,13 +1,7 @@
 
 
 function onPageLoad() {
-	axios({
-		method: 'get',
-		url: 'https://dog.ceo/api/breeds/list/all',
-		params: {
-			_limit:5
-		}
-	})
+	axios.get('https://dog.ceo/api/breeds/list/all')
 		.then(res => showOutput(res))
 		.catch(err => console.error(err));
 }
